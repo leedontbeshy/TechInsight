@@ -1,11 +1,10 @@
-// File: app/laptops/[id]/page.tsx
 
 import React from 'react';
 import { Laptop, SimilarLaptop, Deal } from '@/types/laptop'; // <-- KIỂM TRA ĐƯỜNG DẪN
 import { notFound } from 'next/navigation';
 import LaptopDetailPageUI from '@/components/laptop-detail/LaptopDetailPageUI'; // <-- KIỂM TRA ĐƯỜNG DẪN
 
- // MOCK DATA ĐẦY ĐỦ HƠN 
+ // MOCK DATA (sau nay lay dât tu firebase)
 
 const MOCK_LAPTOP_DATA: Laptop = {
   id: "lenovo-ideapad-5-pro-16",
@@ -117,7 +116,7 @@ async function fetchMockSimilarLaptops(currentLaptopId: string): Promise<Similar
 //end MOCK DATA & HÀM FETCH fake =
 
 
-// --- Component Page ---
+// component page
 export default async function Page({ params }: { params: { id: string } }) {
   const laptopId = params.id;
   const laptopData = await fetchMockLaptopData(laptopId);
