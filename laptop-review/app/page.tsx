@@ -69,7 +69,11 @@ export default function Home() {
                 <div key={i} className="overflow-hidden bg-white border rounded-lg shadow-sm">
                   <div className="p-4">
                     <div className="w-full h-40 mb-4 overflow-hidden bg-gray-200 rounded-md"></div>
+
+                    <Link href={`/laptops/${i + 1}`}>
                     <h3 className="mb-2 text-lg font-medium">Laptop Model {i + 1}</h3>
+                    </Link>
+
                     <div className="flex items-center mb-2">
                       {Array.from({ length: 5 }).map((_, j) => (
                         <svg key={j} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
