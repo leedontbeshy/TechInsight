@@ -19,7 +19,7 @@ export default function Home() {
         <div className="container flex items-center justify-between h-16 px-4 mx-auto">
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/placeholder.svg" alt="TechReview Logo" width={40} height={40} className="rounded" />
-            <span className="text-xl font-bold">TechReview</span>
+            <span className="text-xl font-bold">AllTech</span>
           </Link>
 
           <div className="relative hidden md:block w-1/3">
