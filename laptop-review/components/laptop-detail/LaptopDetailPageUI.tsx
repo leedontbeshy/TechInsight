@@ -478,7 +478,7 @@ export default function LaptopDetailPageUI({
             Detailed Analysis
           </h2>
 
-          //hieu nang
+          {/* --- //hieu nang --- */}
           {(laptop.benchmarks || laptop.performanceAnalysis) && (
             <div className="bg-white rounded-lg shadow p-5">
               <div className="flex items-center justify-between mb-4">
@@ -721,7 +721,7 @@ export default function LaptopDetailPageUI({
             </div>
           )}
 
-          //pin
+          {/* --- pin --- */}
           {(laptop.specs.battery || laptop.batteryAnalysis) && (
             <div className="bg-white rounded-lg shadow p-5">
               <div className="flex items-center justify-between mb-4">
@@ -822,7 +822,7 @@ export default function LaptopDetailPageUI({
             </div>
           )}
 
-          //thiet ke va nag
+          {/* --- //thiet ke va nag --- */}
           {(laptop.dimensions || laptop.weight || laptop.designAnalysis) && (
             <div className="bg-white rounded-lg shadow p-5">
               <div className="flex items-center justify-between mb-4">
@@ -858,7 +858,7 @@ export default function LaptopDetailPageUI({
             </div>
           )}
 
-          //man hinh
+          {/* --- man hinh --- */}
           {(laptop.specs.display || laptop.displayAnalysis) && (
             <div className="bg-white rounded-lg shadow p-5">
               <div className="flex items-center justify-between mb-4">
@@ -936,7 +936,7 @@ export default function LaptopDetailPageUI({
             </div>
           )}
 
-          //ban phim
+          {/* --- ban phim --- */}
           {laptop.keyboardAnalysis && (
             <div className="bg-white rounded-lg shadow p-5">
               <div className="flex items-center justify-between mb-3">
@@ -949,7 +949,7 @@ export default function LaptopDetailPageUI({
             </div>
           )}
 
-          //trackpad
+          {/* --- 6. Trackpad --- */}
           {laptop.trackpadAnalysis && (
             <div className="bg-white rounded-lg shadow p-5">
               <div className="flex items-center justify-between mb-3">
@@ -962,7 +962,7 @@ export default function LaptopDetailPageUI({
             </div>
           )}
 
-          //speakers
+          {/* --- //speaker --- */}
           {laptop.speakersAnalysis && (
             <div className="bg-white rounded-lg shadow p-5">
               <div className="flex items-center justify-between mb-3">
@@ -975,7 +975,7 @@ export default function LaptopDetailPageUI({
             </div>
           )}
 
-          //webcam
+          {/* --- //webcam --- */}
           {laptop.webcamAnalysis && (
             <div className="bg-white rounded-lg shadow p-5">
               <div className="flex items-center justify-between mb-3">
@@ -994,7 +994,7 @@ export default function LaptopDetailPageUI({
             </div>
           )}
 
-         //cong ket noi
+         {/* --- //cong ket noi --- */}
           {(laptop.portsLeft || laptop.portsRight || laptop.portsAnalysis) && (
             <div className="bg-white rounded-lg shadow p-5">
               <div className="flex items-center justify-between mb-3">
@@ -1035,9 +1035,9 @@ export default function LaptopDetailPageUI({
             </div>
           )}
         </div>{" "}
-        //end ptich chi tiet
+        {/* ---  end ptich chi tiet --- */}
         
-        //deals
+        {/* --- //deals --- */}
         {laptop.deals && laptop.deals.length > 0 && (
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
