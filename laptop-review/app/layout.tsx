@@ -5,7 +5,6 @@ import { Inter } from "next/font/google"
 import { useState, useEffect } from "react"
 import InitialLoadingScreen from "@/components/initial-loading-screen"
 import "./globals.css"
-import ClientLayout from '../components/ClientLayout'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -28,13 +27,16 @@ export default function RootLayout({
     return () => clearTimeout(timer)
   }, [])
 
-    return (
-      <html lang="en">
-        <body className={inter.className}>
-          <ClientLayout>{children}</ClientLayout>
-        </body>
-      </html>
-    )
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        {mounted && <InitialLoadingScreen onLoadingComplete={() => setLoading(false)} />}
+        <div className={loading ? 'invisible' : 'visible'}>
+          {children}
+        </div>
+      </body>
+    </html>
+  )
 }
 
 // Metadata needs to be in a separate file in app router when using client components
