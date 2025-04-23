@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, type ReactNode } from "react"
+import { useState, type ReactNode, isValidElement } from "react"
 
 interface TabProps {
   label: string
@@ -19,8 +19,14 @@ interface TabPanelProps {
 export default function TabPanel({ children, defaultTab = 0 }: TabPanelProps) {
   const [activeTab, setActiveTab] = useState(defaultTab)
 
-  // Extract tabs from children
-  const tabs = Array.isArray(children) ? children : [children]
+  // Extract tabs from children and filter out non-element children
+  const tabs = Array.isArray(children) 
+    ? children.filter(child => isValidElement(child))
+    : isValidElement(children) ? [children] : [];
+  
+  if (tabs.length === 0) {
+    return null;
+  }
 
   return (
     <div>
@@ -38,7 +44,7 @@ export default function TabPanel({ children, defaultTab = 0 }: TabPanelProps) {
         </div>
       </div>
 
-      <div>{tabs[activeTab]}</div>
+      <div>{activeTab < tabs.length ? tabs[activeTab] : null}</div>
     </div>
   )
 }
