@@ -21,6 +21,7 @@ import SpecItem from "./spec-item";
 import TabPanel from "./tab-panel";
 import RatingBar from "./rating-bar";
 import ComparisonTable from "./comparison-table";
+import LaptopComparisonSelector from "@/components/comparison/laptop-comparison-selector"
 
 import {
   Laptop,
@@ -1037,6 +1038,9 @@ export default function LaptopDetailPageUI({
         </div>{" "}
         {/* ---  end ptich chi tiet --- */}
         
+          {/* Comparison Selector */}
+        <LaptopComparisonSelector currentLaptopId={laptop.id} />
+
         {/* --- //deals --- */}
         {laptop.deals && laptop.deals.length > 0 && (
           <div className="mb-8">
