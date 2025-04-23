@@ -61,13 +61,11 @@ export default function Home() {
 
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white border-b shadow-sm">
-        <div className="container flex items-center h-16 px-4 mx-auto">
-          {/* Logo và Danh mục */}
-          <div className="flex items-center space-x-8 mr-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image src="/placeholder.svg" alt="TechReview Logo" width={40} height={40} className="rounded" />
-              <span className="text-xl font-bold">TechReview</span>
-            </Link>
+        <div className="container flex items-center justify-between h-16 px-4 mx-auto">
+          <Link href="/" className="flex items-center space-x-2">
+            <Image src="/placeholder.svg" alt="TechReview Logo" width={40} height={40} className="rounded" />
+            <span className="text-xl font-bold">TechReview</span>
+          </Link>
 
             <Link href="/#categories" className="flex items-center text-sm font-bold hover:text-gray-700">
               Danh mục
@@ -140,7 +138,7 @@ export default function Home() {
                 >
                   <div className="p-4">
                     <div className="w-full h-40 mb-4 overflow-hidden bg-gray-200 rounded-md"></div>
-                    <h3 className="mb-2 text-lg font-medium">{laptop.name}</h3>
+                    <h3 className="mb-2 text-lg font-medium">Laptop Model {i + 1}</h3>
                     <div className="flex items-center mb-2">
                       {Array.from({ length: 5 }).map((_, j) => (
                         <svg key={j} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
