@@ -120,7 +120,7 @@ export default function DetailedAnalysis({ laptop }: DetailedAnalysisProps) {
             <div>
               <h5 className="text-sm font-medium mb-2">Plugged In (AC Power)</h5>
               <div className="flex items-center justify-between mb-2 text-sm">
-                <span>GB6 Single</span>
+                <span>Geekbench6 Single</span>
                 <span className="font-bold">{laptop.detailedSpecs?.cpu?.benchmarks?.geekbench6Single || 2345}</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2 mb-3">
@@ -128,13 +128,17 @@ export default function DetailedAnalysis({ laptop }: DetailedAnalysisProps) {
               </div>
 
               <div className="flex items-center justify-between mb-2 text-sm">
-                <span>GB6 Multi</span>
+                <span>Geekbench6 Multi</span>
                 <span className="font-bold">{laptop.detailedSpecs?.cpu?.benchmarks?.geekbench6Multi || 11876}</span>
               </div>
               <div className="w-full bg-gray-200 rounded-full h-2 mb-3">
                 <div className="bg-teal-500 h-2 rounded-full" style={{ width: "75%" }}></div>
               </div>
             </div>
+
+            
+
+
 
             <div>
               <h5 className="text-sm font-medium mb-2">Unplugged (Battery)</h5>
@@ -165,11 +169,67 @@ export default function DetailedAnalysis({ laptop }: DetailedAnalysisProps) {
       </div>
 
       {/* 2. Battery */}
-      <div className="bg-white rounded-lg shadow p-5">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-xl font-semibold text-gray-800">2. Battery</h3>
-          {laptop.benchmarks?.battery && getScoreBadge(laptop.benchmarks.battery)}
-        </div>
+          {/* Battery Section */}
+          <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xl font-semibold">2. Battery</h3>
+              <div className="bg-blue-600 text-white px-3 py-1 rounded-full font-bold">8.7/10</div>
+            </div>
+
+            {/* <div className="mb-4">
+              <p className="mb-2">
+                <span className="font-medium">Battery Capacity:</span> 75Wh
+              </p>
+            </div> */}
+
+            {/* <h4 className="font-semibold mb-4">Battery Life</h4> */}
+            <div className="space-y-6 mb-6">
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="font-medium">Casual Use</span>
+                  <span className="font-medium">12.5 hours</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4">
+                  <div
+                    className="h-4 rounded-full bg-green-500 flex items-center justify-end px-2"
+                    style={{ width: "83%" }}
+                  >
+                    <span className="text-xs text-white font-medium">12.5h</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="font-medium">Watching Online Video</span>
+                  <span className="font-medium">10.2 hours</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4">
+                  <div
+                    className="h-4 rounded-full bg-blue-500 flex items-center justify-end px-2"
+                    style={{ width: "68%" }}
+                  >
+                    <span className="text-xs text-white font-medium">10.2h</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="font-medium">Extreme Use (Gaming/Rendering)</span>
+                  <span className="font-medium">3.8 hours</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-4">
+                  <div
+                    className="h-4 rounded-full bg-yellow-500 flex items-center justify-end px-2"
+                    style={{ width: "25%" }}
+                  >
+                    <span className="text-xs text-white font-medium">3.8h</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
         <p className="text-gray-700">
           The {laptop.detailedSpecs?.battery?.capacity}Wh battery delivers impressive runtime for a laptop with these specs. 
           In our testing, it lasted about 8 hours of general productivity work and web browsing at 150 nits brightness. 
